@@ -1,0 +1,507 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: white;
+}
+.login-page{
+    background-color: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: darkseagreen;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.btn {
+    padding: 8px 12px;
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    display: inline-block;
+}
+.btn-add :hover{
+    background: darkgray;
+}
+
+.btn-add { background: darkseagreen; border-radius: 50px; }
+.btn-edit { background: cornflowerblue; border-radius: 50px; }
+.btn-delete { background-color: indianred; border-radius: 50px; }
+
+form {
+    width: 450px;
+    padding: 30px;
+    border: 4px solid #ddd;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+input[type="text"], input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+}
+
+label.error {
+    color: red;
+    font-size: 13px;
+    margin-top: 4px;
+    display: block;
+}
+/* jQuery validation field border colors */
+input {
+    transition: 0.2s !important;
+}
+
+input.error {
+    border: 2px red;
+}
+
+input.valid {
+    border: 4px green;
+}
+
+/* Checkbox + Radio highlight (optional) */
+input[type="radio"].error,
+input[type="checkbox"].error {
+    outline: 2px red;
+}
+
+input[type="radio"].valid,
+input[type="checkbox"].valid {
+    outline: 2px green;
+}
+
+/* Force borders for validation */
+input.error {
+    border: 2px solid red !important;
+}
+
+input.valid {
+    border: 2px solid green !important;
+}
+
+/* ===== Login Page Styling ===== */
+
+.login-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+}
+
+.login-card {
+    width: 500px;
+    background: cornflowerblue;
+    padding: 50px;
+    border-radius: 12px;
+    border: 1px solid cadetblue;
+    box-shadow: 0px 6px 20px rgba(0,0,0,0.08);
+}
+
+.login-card h2 {
+    margin-top: 0;
+    margin-bottom: 18px;
+    margin-right: 18px;
+    text-align: center;
+}
+
+.login-card label {
+    font-weight: bold;
+    display: block;
+    margin-top: 12px;
+
+}
+
+.login-card input[type="email"],
+.login-card input[type="password"] {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 8px;
+    border: 1px solid cadetblue;
+}
+
+.login-card button {
+    width: 70%;
+    margin-top: 60px;
+    margin-left: 60px;
+    padding: 15px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    background-color: black;
+}
+
+.login-footer {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+    color: black;
+}
+.pass-wrap {
+    position: relative;
+    width: 100%;
+}
+
+.pass-wrap input {
+    width: 100%;
+    padding: 10px 65px 10px 10px; /* space for button */
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#togglePass {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    padding: 3px 6px;       /* ✅ smaller */
+    font-size: 11px;        /* ✅ smaller text */
+    width: auto;            /* ✅ no fixed width */
+    min-width: 0;           /* ✅ remove default */
+
+    border: 1px solid #ccc;
+    background: black;
+    border-radius: 6px;
+    cursor: pointer;
+}
+/* ===== Modern Dashboard UI ===== */
+
+.page-container {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 18px;
+}
+
+.title-box h2 {
+    margin: 0;
+    font-size: 26px;
+}
+
+.title-box p {
+    margin: 4px 0 0;
+    color: #666;
+    font-size: 14px;
+}
+
+.actions-box {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    border: 1px solid #e2e2e2;
+    border-radius: 14px;
+    padding: 15px;
+    font-size: 60%;
+    box-shadow: 0px 8px 25px rgba(0,0,0,0.06);
+}
+
+/* table look */
+.table-wrap {
+    color: gray;
+    text-align: left;
+    color: black;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 10px;
+   width: 100%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+th {
+    text-align: left;
+    padding: 12px;
+    background: black;
+    color: white;
+    font-size: 14px;
+
+
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+}
+
+/* row hover */
+tbody tr:hover {
+    background: lightgray;
+}
+
+/* badges */
+.badge {
+
+    padding: 4px 10px;
+    border-radius: 50px;
+    background: darkgray;
+    font-size: 12px;
+
+}
+
+/* animation */
+.fade-row {
+    opacity: 0;
+    transform: translateY(10px);
+    animation: fadeUp 0.5s ease forwards;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.user-img {
+    width: 55px;
+    height: 55px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.user-img:hover {
+    transform: scale(1.2);
+    z-index: 999;
+    position: relative;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+}
+.title-box{
+    color: black;
+    background-color: darkseagreen;
+    padding: 10px;
+    border: black;
+    border-radius: 25px;
+
+}
+.pagination-wrap {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.page-btn {
+    padding: 8px 12px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    background: white;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.page-btn:hover {
+    background: #f0f0f0;
+}
+
+.page-btn.active {
+    background: #333;
+    color: white;
+    border-color: #333;
+}
+
+.nav-btn {
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    text-decoration: none;
+    background: darkseagreen;
+    color: #333;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.nav-btn:hover {
+    background: #f0f0f0;
+}
+
+.nav-btn.disabled {
+    opacity: 1.0;
+    cursor: not-allowed;
+}
+.table-top-actions {
+    display: flex;
+    justify-content: flex-start; /* ✅ left */
+
+    margin-top: 20px;
+}
+.table-top-actions{
+     display: flex;
+     gap: 10px;
+     justify-content: flex-start;
+
+     flex-wrap: wrap;
+ }
+
+.btn-view{
+    background: #444;
+    color: #fff;
+}
+.success {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px;
+    border-radius: 10px;
+    margin: 12px 0;
+    border: 1px solid #c3e6cb;
+}
+/* ===== Layout Sidebar ===== */
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    background: #f2f2f2;
+}
+
+.sidebar {
+    width: 230px;
+    background: darkseagreen;
+    color: black;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px ;
+}
+
+.logo {
+    margin: 0 0 18px;
+    font-size: 20px;
+    background-color: black;
+    color: darkseagreen;
+    padding: 7px;
+    font-weight: bold;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.menu-link {
+    display: block;
+    padding: 12px 12px;
+    margin-bottom: 8px;
+    border-radius: 10px;
+    color: white;
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+.menu-link:hover {
+    background: cadetblue;
+}
+
+.logout-link {
+    background: indianred;
+}
+.logout-link:hover{
+    background-color: darkred;
+}
+
+.sidebar-footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    font-weight: bold;
+}
+
+
+.table-header-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 12px 0;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.table-header-bar h3 {
+    margin: 0;
+    font-size: 20px;
+}
+
+.table-header-actions {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-left: 520px;
+    color: black;
+}
+
+
+
+form input[type="text"],
+form input[type="email"],
+form input[type="number"],
+form input[type="file"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+}
+
+.btn-add:hover{
+    background: seagreen;
+}
+.btn-delete:hover{
+    background: darkred;
+}
+.btn-edit:hover{
+    background: darkslateblue;
+}
+.btn-view:hover{
+    background: darkgray;
+}

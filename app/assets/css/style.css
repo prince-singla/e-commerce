@@ -1,0 +1,274 @@
+:root{
+    --pastel-bg: #fffafc;
+    --pastel-card: #ffffff;
+    --pastel-primary: #b8c6ff;
+    --pastel-secondary: #ffd6e8;
+    --pastel-accent: #c9f7f5;
+    --text-dark: #222;
+    --muted: #6c757d;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background: var(--pastel-bg);
+    color: var(--text-dark);
+}
+
+.navbar{
+    background: rgba(255,255,255,0.9);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand{
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.btn-pastel{
+    background: var(--pastel-primary);
+    border: none;
+    color: #111;
+    border-radius: 999px;
+    padding: 10px 18px;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-pastel:hover{
+    transform: translateY(-2px);
+    filter: brightness(0.97);
+    background: lightgray;
+}
+
+.section-title{
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.product-card{
+    border: 0;
+    border-radius: 18px;
+    overflow: hidden;
+    background: var(--pastel-card);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    transition: 0.25s ease-in-out;
+}
+
+.product-card:hover{
+    transform: translateY(-6px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.09);
+}
+
+.product-card img{
+    height: 230px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.badge-soft{
+    background: var(--pastel-secondary);
+    color: #111;
+    font-weight: 600;
+    border-radius: 999px;
+    padding: 6px 12px;
+}
+
+.price-old{
+    text-decoration: line-through;
+    color: #999;
+    font-size: 0.9rem;
+}
+
+.price-new{
+    font-weight: 700;
+}
+
+.hero-caption{
+    background: rgba(255,255,255,0.85);
+    border-radius: 18px;
+    padding: 16px 18px;
+    display: inline-block;
+}
+
+footer{
+    margin-top: 60px;
+    padding: 25px 0;
+    border-top: 1px solid rgba(0,0,0,0.06);
+    color: var(--muted);
+}
+
+.product-slider-wrap{
+    position: relative;
+}
+
+.product-slider{
+    display: flex;
+    gap: 18px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 6px 4px 18px 4px;
+}
+
+.product-slider::-webkit-scrollbar{
+    height: 8px;
+}
+
+.product-slider::-webkit-scrollbar-thumb{
+    background: rgba(0,0,0,0.12);
+    border-radius: 10px;
+}
+
+.product-slide{
+    flex: 0 0 auto;
+    width: 260px;
+}
+
+.slider-btn{
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 0;
+    background: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s ease-in-out;
+}
+
+.slider-btn:hover{
+    transform: translateY(-2px);
+}
+
+.slider-controls{
+    display: flex;
+    gap: 10px;
+}
+.back-to-top{
+    position: fixed;
+    bottom: 22px;
+    right: 22px;
+    width: 46px;
+    height: 46px;
+    border-radius: 999px;
+    border: none;
+    background: var(--pastel-accent);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: 0.2s ease-in-out;
+}
+
+.back-to-top:hover{
+    transform: translateY(-3px);
+    filter: brightness(0.98);
+}
+.navbar-brand img{
+    object-fit: contain;
+}
+.carousel-item {
+    transition: transform 1.5s ease-in-out;
+}
+
+.hero-slide{
+    position: relative;
+    height: 420px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: #f8f9ff;
+}
+
+.hero-bg{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: blur(18px);
+    transform: scale(1.1);
+    opacity: 0.35;
+}
+
+.hero-img{
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+}
+.carousel-caption{
+    z-index: 5 !important;
+}
+
+.hero-img{
+    z-index: 1 !important;
+}
+.carousel-caption{
+    bottom: 2rem;
+}
+.product-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: contain;
+    background: #f8f9ff;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+    padding: 12px;
+}
+/* Dark glass effect for hero slider arrows */
+#heroSlider .carousel-control-prev,
+#heroSlider .carousel-control-next{
+    width: 55px;
+    height: 55px;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+}
+
+#heroSlider .carousel-control-prev{
+    left: 15px;
+}
+
+#heroSlider .carousel-control-next{
+    right: 15px;
+}
+
+#heroSlider .carousel-control-prev-icon,
+#heroSlider .carousel-control-next-icon{
+    width: 55px;
+    height: 55px;
+    border-radius: 18px;
+
+    background-color: rgba(0, 0, 0, 0.28);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    box-shadow: 0 10px 30px rgba(0,0,0,0.22);
+    border: 1px solid rgba(255,255,255,0.12);
+
+    background-size: 18px 18px;
+}
+
+#heroSlider .carousel-control-prev:hover .carousel-control-prev-icon,
+#heroSlider .carousel-control-next:hover .carousel-control-next-icon{
+    background-color: rgba(0, 0, 0, 0.38);
+    transform: scale(1.04);
+    transition: 0.2s ease;
+}
+/* Dark dots for hero slider */
+#heroSlider .carousel-indicators [data-bs-target]{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.35);
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,0.15);
+}
+
+#heroSlider .carousel-indicators .active{
+    background-color: rgba(0,0,0,0.75);
+}
+
+
